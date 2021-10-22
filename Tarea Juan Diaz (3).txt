@@ -1,0 +1,29 @@
+*REFLEXION
+*LAS FUNCIONES ASOCIADAS A LAS SENTENCIAS SQL, AYUDAN MUCHO A LA BUSQUEDA Y FILTRO DE LA *INFORMACIÓN.
+
+use basedb;
+
+select * from libro where editorial<>"Anaya";
+ 
+select * from libro where editorial<>"Planeta";
+
+select nombrelibro,editorial,ejemplares from libro where ejemplares between 100 and 330;
+
+select * from libro where nombrelibro like 'E%';
+
+Select apellidop,cargo from datoslaborales where sueldo between 550000 and 750000;
+
+select nombre,apellidop,apellidom,cargo,departamento,edad from datoslaborales where departamento not in ("Marketing");
+
+select * from libro group by categoria;
+
+select * from libro;
+
+select count(*) from libro where editorial="Planeta";
+
+select count(*) from datoslaborales where sueldo>500000;
+
+select avg(sueldo) from datoslaborales;
+select sum(sueldo),avg(sueldo) from datoslaborales;
+
+select departamento,sum(sueldo),avg(sueldo) from datoslaborales GROUP BY departamento;

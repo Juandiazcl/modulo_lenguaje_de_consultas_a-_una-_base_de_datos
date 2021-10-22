@@ -1,0 +1,24 @@
+use basedb;
+
+select * from libro;
+
+select nombrelibro,categoria from libro;
+
+select nombre,apellidoP,cargo from datoslaborales;
+
+select * from libro where idlibro=1;
+
+select * from datoslaborales where departamento="Finanzas" and cargo="Contador";
+
+select * from datoslaborales where departamento="Finanzas" and edad>25;
+
+select * from datoslaborales where departamento="Marketing" and sueldo>1000000;
+
+select * from datoslaborales where cargo="Gerente" and sueldo>1000000;
+
+select * from datoslaborales where edad>25 or sueldo>1000000;
+
+select * from datoslaborales where idempleado In (1,4);
+
+*****
+Reflexion:seguimos trabajando con bd sql y aprendiendo. Excelente sigue el curso.

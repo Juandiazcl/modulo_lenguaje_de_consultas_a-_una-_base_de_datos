@@ -1,0 +1,27 @@
+**** reflexion: son ilimitadas las oportunidades que nos ofrecen las bd relacionales y el standard sql.
+use basedb;
+
+select * from libro where ejemplares>100;
+
+select * from libro where edicion=1 or edicion=2;
+
+select autor from libro where edicion=1 or edicion=2 or edicion=3;
+
+select nombre,apellidop,apellidom,cargo from datoslaborales where sueldo>=500000 and departamento="Finanzas";
+
+select * from datoslaborales where departamento="Marketing";
+select * from datoslaborales where departamento not in ("Marketing");
+
+select * from datoslaborales where departamento not in ("Marketing","Ventas");
+select * from libro where editorial<>"Planeta";
+
+select * from datoslaborales where cargo<>"Jefe";
+select * from libro where anopublicaciom between "2012-01-01" and "2022-01-01";
+
+select * from datoslaborales where sueldo between 700000 and 990000;
+
+select * from datoslaborales where fechaingreso between "2019-01-01" and "2020-01-01";
+
+select * from datoslaborales where nombre like 'D%';
+
+select * from libro where nombrelibro like 'E%';
